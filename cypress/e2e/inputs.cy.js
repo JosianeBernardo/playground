@@ -2,12 +2,11 @@ describe("Input Fields", () => {
 
     beforeEach(() => {
         cy.goHome()
+        cy.doLogin()
     })
 
     it("deve preencher o campo texto", () => {
         //access page
-        cy.login("papito@cyskills.com.br", "showtime")
-        cy.userLoggedIn()
         cy.goTo('/input-fields', 'Input Fields')
         //Fill out form
         cy.get('[data-cy="fullname"]')
